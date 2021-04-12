@@ -17,42 +17,42 @@ $posts->execute(array($_REQUEST['id']));
 ?>
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>オリジナル掲示板</title>
 
-	<link rel="stylesheet" href="style.css" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>オリジナル掲示板</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-<div id="wrap">
-  <div id="head">
-    <h1>オリジナル掲示板</h1>
-  </div>
-  <div id="content">
-  <p>&laquo;<a href="index.php">一覧にもどる</a></p>
-
-<?php if ($post = $posts->fetch()): ?>
-    <div class="msg">
-      <img src="member_picture/<?php print(h($post['picture'])); ?>" width="100" height="100" />
-      <p>
-        <?php print(h($post['message'])); ?><span class="name">（<?php print(h($post['name'])); ?>）</span>
-      </p>
-      <p class="day">
-        <?php print(h($post['created'])); ?>
-        <!-- ログインユーザーと投稿したユーザーが一致してたら -->
-        <?php if ($_SESSION['id'] == $post['member_id']): ?>
-          [<a href="del_check.php?id=<?php print($post['id']); ?>"
-          style="color: #F33;">削除</a>]
-        <?php endif; ?>
-      </p>
+  <div id="wrap">
+    <div id="head">
+      <h1>オリジナル掲示板</h1>
     </div>
-<?php else: ?>
-	<p>その投稿は削除されたか、URLが間違えています</p>
-<?php endif; ?>
+    <div id="content">
+      <p>&laquo;<a href="index.php">一覧にもどる</a></p>
+
+      <?php if ($post = $posts->fetch()) : ?>
+        <div class="msg">
+          <img src="member_picture/<?php print(h($post['picture'])); ?>" width="100" height="100" />
+          <p>
+            <?php print(h($post['message'])); ?><span class="name">（<?php print(h($post['name'])); ?>）</span>
+          </p>
+          <p class="day">
+            <?php print(h($post['created'])); ?>
+            <!-- ログインユーザーと投稿したユーザーが一致してたら -->
+            <?php if ($_SESSION['id'] == $post['member_id']) : ?>
+              [<a href="del_check.php?id=<?php print($post['id']); ?>" style="color: #F33;">削除</a>]
+            <?php endif; ?>
+          </p>
+        </div>
+      <?php else : ?>
+        <p>その投稿は削除されたか、URLが間違えています</p>
+      <?php endif; ?>
+    </div>
   </div>
-</div>
 </body>
+
 </html>
