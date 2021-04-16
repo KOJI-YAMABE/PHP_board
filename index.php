@@ -1,11 +1,8 @@
 <?php
 session_start();
 require('libs/dbconnect.php');
-include 'session.php';
-
-function h($s) {
-  return htmlspecialchars($s, ENT_QUOTES);
-}
+include 'inc/session.php';
+include 'inc/functions.php';
 
 // ページネーションの設定(31~43)
 $page = $_REQUEST['page'];

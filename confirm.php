@@ -1,12 +1,9 @@
 <?php
 session_start();
 require('libs/dbconnect.php');
+include 'inc/functions.php';
 
-function h($s) {
-  return htmlspecialchars($s, ENT_QUOTES);
-}
-
-if (!isset($_POST['msg'])) {
+if (empty($_POST['msg'])) {
   header('Location: index.php');
   exit();
 }

@@ -1,18 +1,17 @@
 <?php
 session_start();
 require('libs/dbconnect.php');
-
-function h($s) {
-  return htmlspecialchars($s, ENT_QUOTES);
-}
+include 'inc/functions.php';
 
 if (empty($_REQUEST['id'])) {
   header('Location: index.php');
   exit();
 }
 
+$member_id = $_REQUEST['id'];
+
 $posts = $db->prepare('SELECT m.name, m.picture, p.* FROM members m, posts p WHERE m.id=p.member_id AND p.id=?');
-$posts->execute(array($_REQUEST['id']));
+$posts->execute(array($member_id));
 
 ?>
 <!DOCTYPE html>
@@ -32,7 +31,6 @@ $posts->execute(array($_REQUEST['id']));
       <h1>オリジナル掲示板</h1>
     </div>
     <div id="content">
-
       <?php if ($post = $posts->fetch()) : ?>
         <div class="check_del">
           <form action="delete.php" method="post">

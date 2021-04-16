@@ -1,10 +1,7 @@
 <?php
 session_start();
 require('libs/dbconnect.php');
-
-function h($s) {
-  return htmlspecialchars($s, ENT_QUOTES);
-}
+include 'inc/functions.php';
 
 if (empty($_REQUEST['id'])) {
   header('Location: index.php');
@@ -38,13 +35,15 @@ $posts->execute(array($_REQUEST['id']));
         <div class="msg">
           <img src="member_picture/<?php print(h($post['picture'])); ?>" width="100" height="100" />
           <p>
-            <?php print(h($post['message'])); ?><span class="name">（<?php print(h($post['name'])); ?>）</span>
+            <?php print(h($post['message'])); ?>
+            <span class="name">（<?php print(h($post['name'])); ?>）</span>
           </p>
           <p class="day">
             <?php print(h($post['created'])); ?>
             <!-- ログインユーザーと投稿したユーザーが一致してたら -->
             <?php if ($_SESSION['id'] == $post['member_id']) : ?>
               [<a href="del_check.php?id=<?php print($post['id']); ?>" style="color: #F33;">削除</a>]
+              [<a href="edit.php?id=<?php print($post['id']); ?>" style="color: green;">編集</a>]
             <?php endif; ?>
           </p>
         </div>

@@ -1,10 +1,7 @@
 <?php
 session_start();
 require('libs/dbconnect.php');
-
-function h($s) {
-  return htmlspecialchars($s, ENT_QUOTES);
-}
+include 'inc/functions.php';
 
 // メールアドレスが入力されてたらクッキーに保存
 if ($_POST['email'] !== '') {

@@ -1,11 +1,7 @@
 <?php 
 session_start();
 require('../libs/dbconnect.php');
-
-function h($s) {
-  return htmlspecialchars($s, ENT_QUOTES);
-}
-
+include '../inc/functions.php';
 include 'check_error.php';
 
 if ($_REQUEST['action'] == 'rewrite' && isset($_SESSION['join'])) {

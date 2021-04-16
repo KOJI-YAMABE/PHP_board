@@ -1,10 +1,7 @@
 <?php
 session_start();
 require('../libs/dbconnect.php');
-
-function h($s) {
-  return htmlspecialchars($s, ENT_QUOTES);
-}
+include '../inc/functions.php';
 
 // セッションのjoinに変数が入っていなかったら登録画面に返す
 if (!isset($_SESSION['join'])) {
