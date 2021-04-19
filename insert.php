@@ -12,16 +12,6 @@ if (!empty($_POST)) {
 
     header('Location: thanks.php');
     exit();
-
-    // 原因究明中
-    // $sql = "ISERT INTO posts (member_id, message, created) VALUES (member_id, message, NOW())"; 
-    // $stmt = $dbh->prepare($sql);
-    // $params = array(
-    //   $_POST['member_id'],
-    //   $_POST['message']
-    //   // 'reply_message_id' => $_POST['reply_message_id']
-    // );
-    // $stmt->execute($params);
 }
 
 ?>

@@ -20,7 +20,6 @@ $posts->execute();
 
 // 「返信」が押されたら
 if (isset($_REQUEST['res'])) {
-  // 返信の処理
   $response = $db->prepare('SELECT m.name, m.picture, p.* FROM members m,posts p WHERE m.id=p.member_id AND p.id=?');
   $response->execute(array($_REQUEST['res']));
 
@@ -35,8 +34,8 @@ if ($_REQUEST['action'] == 'rewrite' && isset($_POST['message'])) {
 
 <!DOCTYPE html>
 <html lang="ja">
-
 <?php include 'inc/head.php'; ?>
+
 <body>
   <div id="wrap">
     <div id="head">
