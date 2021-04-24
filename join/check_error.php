@@ -4,6 +4,7 @@ if (!empty($_POST)) {
   $_POST['name'] = preg_replace('/\A[\p{C}\p{Z}]++|[\p{C}\p{Z}]++\z/u', '', $_POST['name']);
 	if ($_POST['name'] === '') {
 		$error['name'] = 'blank';
+		$smarty->assign('blank', $error['name']);
 	}
 	if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
 		$error['email'] = 'email';
