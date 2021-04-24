@@ -7,7 +7,6 @@ include 'check_error.php';
 if ($_REQUEST['action'] == 'rewrite' && isset($_SESSION['join'])) {
 	$_POST = $_SESSION['join'];
 }
-?>
 
 <!DOCTYPE html>
 <html lang="ja">
