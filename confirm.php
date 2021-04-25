@@ -22,5 +22,4 @@ $smarty->assign('reply_post_id', $reply_post_id);
 
 
 $smarty->display('confirm.tpl');
-
 ?>

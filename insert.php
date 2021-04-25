@@ -13,5 +13,4 @@ if (!empty($_POST)) {
     header('Location: thanks.php');
     exit();
 }
-
 ?>
