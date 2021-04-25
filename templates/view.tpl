@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="ja">
-{include file='inc/head.php'}
+{include file='../inc/head.php'}
 
 <body>
   <div id="wrap">
@@ -13,7 +13,7 @@
 
       {if $post}
         <div class="msg">
-          <img src="member_picture/{$post.picture}" width="100" height="100" />
+          <img src="../images/member_picture/{$post.picture}" width="100" height="100" />
           <p>
             {$post.message}
             <span class="name">（{$post.name}）</span>

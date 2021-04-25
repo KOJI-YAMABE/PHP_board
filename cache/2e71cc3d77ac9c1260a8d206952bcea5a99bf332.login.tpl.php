@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-25 04:15:46
+/* Smarty version 3.1.39, created on 2021-04-25 06:52:10
   from '/Applications/MAMP/htdocs/mini_bbs/templates/login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6084ecf2c55586_79163844',
+  'unifunc' => 'content_6085119a1c76c9_92219506',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 3600,
 ),true)) {
-function content_6084ecf2c55586_79163844 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6085119a1c76c9_92219506 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>

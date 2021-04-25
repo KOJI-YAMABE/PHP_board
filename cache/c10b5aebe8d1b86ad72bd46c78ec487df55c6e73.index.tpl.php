@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-25 05:26:53
+/* Smarty version 3.1.39, created on 2021-04-25 06:52:15
   from '/Applications/MAMP/htdocs/mini_bbs/templates/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6084fd9da81531_59819444',
+  'unifunc' => 'content_6085119f343c48_81588967',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 3600,
 ),true)) {
-function content_6084fd9da81531_59819444 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6085119f343c48_81588967 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -44,11 +44,11 @@ function content_6084fd9da81531_59819444 (Smarty_Internal_Template $_smarty_tpl)
       <div style="text-align: right"><a href="logout.php">ログアウト</a></div>
       <form action="confirm.php" method="post">
         <dl>
-          <dt>本田さん、メッセージをどうぞ</dt>
+          <dt>Alexさん、メッセージをどうぞ</dt>
           <dd>
             <textarea name="msg" cols="50" rows="5"></textarea>
             <input type="hidden" name="reply_post_id" value="" />
-            <input type="hidden" name="member_id" value="7" />
+            <input type="hidden" name="member_id" value="6" />
           </dd>
         </dl>
         <div>

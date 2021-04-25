@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-{include file='inc/head.php'}
+{include file='../inc/head.php'}
 
 <body>
   <div id="wrap">
@@ -28,7 +28,7 @@
       <!-- 投稿記事を取得する -->
       {foreach $posts as $post}
         <div class="msg">
-          <img src="member_picture/{$post.picture}" width="48" height="48" alt="{$post.name}" />
+          <img src="../images/member_picture/{$post.picture}" width="48" height="48" alt="{$post.name}" />
           <p>
             {$post.message}<span class="name">（{$post.name}）</span>[<a href="index.php?res={$post.id}">返信</a>]
           </p>
