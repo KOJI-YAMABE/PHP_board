@@ -1,50 +1,21 @@
 <?php
 session_start();
 require('libs/dbconnect.php');
+require_once('setup.php');
 include 'inc/functions.php';
+
+$smarty = new Smarty_mini_bbs();
 
 if (empty($_REQUEST['id'])) {
   header('Location: index.php');
   exit();
 }
+$smarty->assign('post_id', $_REQUEST['id']);
 
 $posts = $db->prepare('SELECT m.name, m.picture, p.* FROM members m, posts p WHERE m.id=p.member_id AND p.id=?');
 $posts->execute(array($_REQUEST['id']));
+$post = $posts->fetch();
+$smarty->assign('post', $post);
 
+$smarty->display('view.tpl');
 ?>
-<!DOCTYPE html>
-<html lang="ja">
-<?php include 'inc/head.php'; ?>
-
-<body>
-  <div id="wrap">
-    <div id="head">
-      <h1>オリジナル掲示板</h1>
-    </div>
-    <div id="content">
-      <p>&laquo;<a href="index.php">一覧にもどる</a></p>
-
-      <?php if ($post = $posts->fetch()) : ?>
-        <div class="msg">
-          <img src="member_picture/<?php print(h($post['picture'])); ?>" width="100" height="100" />
-          <p>
-            <?php print(h($post['message'])); ?>
-            <span class="name">（<?php print(h($post['name'])); ?>）</span>
-          </p>
-          <p class="day">
-            <?php print(h($post['created'])); ?>
-            <!-- ログインユーザーと投稿したユーザーが一致してたら -->
-            <?php if ($_SESSION['id'] == $post['member_id']) : ?>
-              [<a href="del_check.php?id=<?php print($post['id']); ?>" style="color: #F33;">削除</a>]
-              [<a href="edit.php?id=<?php print($post['id']); ?>" style="color: green;">編集</a>]
-            <?php endif; ?>
-          </p>
-        </div>
-      <?php else : ?>
-        <p>その投稿は削除されたか、URLが間違えています</p>
-      <?php endif; ?>
-    </div>
-  </div>
-</body>
-
-</html>

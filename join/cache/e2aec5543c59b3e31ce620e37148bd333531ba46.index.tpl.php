@@ -1,24 +1,24 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-24 04:12:54
+/* Smarty version 3.1.39, created on 2021-04-25 03:33:21
   from '/Applications/MAMP/htdocs/mini_bbs/templates/join/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60839ac667ff21_97053520',
+  'unifunc' => 'content_6084e3013fdef4_38792819',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '834369ac4ec382d5cb29f4bc5e55485a5ad52cf0' => 
     array (
       0 => '/Applications/MAMP/htdocs/mini_bbs/templates/join/index.tpl',
-      1 => 1619234351,
+      1 => 1619242682,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 3600,
 ),true)) {
-function content_60839ac667ff21_97053520 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6084e3013fdef4_38792819 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="ja">
 	<head>

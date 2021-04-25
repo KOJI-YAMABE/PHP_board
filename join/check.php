@@ -4,6 +4,8 @@ require('../libs/dbconnect.php');
 require_once('../setup.php');
 include '../inc/functions.php';
 
+$smarty = new Smarty_mini_bbs();
+
 // セッションのjoinに変数が入っていなかったら登録画面に返す
 if (!isset($_SESSION['join'])) {
 	header('Location: index.php');

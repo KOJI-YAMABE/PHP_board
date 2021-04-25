@@ -1,7 +1,10 @@
 <?php
 session_start();
 require('libs/dbconnect.php');
+require_once('setup.php');
 include 'inc/functions.php';
+
+$smarty = new Smarty_mini_bbs();
 
 // メールアドレスが入力されてたらクッキーに保存
 if ($_POST['email'] !== '') {
@@ -31,58 +34,16 @@ if (!empty($_POST)) {
       exit();
     } else {
       $error['login'] = 'failed';
+      $smarty->assign('failed', $error['login']);
     }
   } else {
     $error['login'] = 'blank';
+    $smarty->assign('blank', $error['login']);
   }
 }
+
+$smarty->assign('email', $email);
+$smarty->assign('password', $_POST['password']);
+
+$smarty->display('login.tpl');
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<?php include 'inc/head.php'; ?>
-
-<body>
-  <div id="wrap">
-    <div id="head">
-      <h1>ログイン</h1>
-    </div>
-    <div id="content">
-      <div id="lead">
-        <p>メールアドレスとパスワードを記入してログインしてください。</p>
-        <p>入会手続きがまだの方はこちらからどうぞ。</p>
-        <p>&raquo;<a href="join/">入会手続きをする</a></p>
-      </div>
-      <form action="" method="post">
-        <dl>
-          <dt>メールアドレス</dt>
-          <dd>
-            <input type="text" name="email" size="35" maxlength="255" value="<?php print(h($email)); ?>" />
-            <?php if ($error['login'] === 'blank') : ?>
-              <p class="error">*メールアドレスが正しくありません</p>
-            <?php endif; ?>
-            <?php if ($error['login'] === 'failed') : ?>
-              <p class="error">*ログインに失敗しました。正しくご記入ください。</p>
-            <?php endif; ?>
-          </dd>
-          <dt>パスワード</dt>
-          <dd>
-            <input type="password" name="password" size="35" maxlength="255" value="<?php print(h($_POST['password'])); ?>" />
-          </dd>
-          <dt>ログイン情報の記録</dt>
-          <dd>
-            <input id="save" type="checkbox" name="save" value="on">
-            <?php if ($error['login'] === 'blank') : ?>
-              <p class="error">*パスワードが正しくありません</p>
-            <?php endif; ?>
-            <label for="save">次回からは自動的にログインする</label>
-          </dd>
-        </dl>
-        <div>
-          <input type="submit" value="ログインする" />
-        </div>
-      </form>
-    </div>
-  </div>
-</body>
-
-</html>

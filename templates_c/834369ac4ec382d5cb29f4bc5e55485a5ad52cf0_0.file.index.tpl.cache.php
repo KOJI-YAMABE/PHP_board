@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-24 04:12:54
+/* Smarty version 3.1.39, created on 2021-04-24 05:38:04
   from '/Applications/MAMP/htdocs/mini_bbs/templates/join/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60839ac6665344_48281428',
+  'unifunc' => 'content_6083aebc3ec538_42454801',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '834369ac4ec382d5cb29f4bc5e55485a5ad52cf0' => 
     array (
       0 => '/Applications/MAMP/htdocs/mini_bbs/templates/join/index.tpl',
-      1 => 1619234351,
+      1 => 1619242682,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60839ac6665344_48281428 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '9847151760839ac65f9473_58654220';
+function content_6083aebc3ec538_42454801 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '19572591076083aebc3ab564_12766376';
 ?>
 <!DOCTYPE html>
 <html lang="ja">
