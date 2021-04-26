@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-24 05:38:04
+/* Smarty version 3.1.39, created on 2021-04-26 01:05:50
   from '/Applications/MAMP/htdocs/mini_bbs/templates/join/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6083aebc3ec538_42454801',
+  'unifunc' => 'content_608611ee2ba609_94379274',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '834369ac4ec382d5cb29f4bc5e55485a5ad52cf0' => 
     array (
       0 => '/Applications/MAMP/htdocs/mini_bbs/templates/join/index.tpl',
-      1 => 1619242682,
+      1 => 1619399148,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6083aebc3ec538_42454801 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '19572591076083aebc3ab564_12766376';
+function content_608611ee2ba609_94379274 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '48326998608611ee268af8_29451479';
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -30,8 +30,9 @@ $_smarty_tpl->compiled->nocache_hash = '19572591076083aebc3ab564_12766376';
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>オリジナル掲示板</title>
-		<link rel="stylesheet" href="../style.css" />
+		<link rel="stylesheet" href="../../style.css" />
 	</head>
+	
 
 <body>
 	<div id="wrap">

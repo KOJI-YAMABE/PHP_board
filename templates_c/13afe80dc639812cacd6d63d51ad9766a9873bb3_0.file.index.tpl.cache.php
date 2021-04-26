@@ -1,32 +1,32 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-25 04:20:45
+/* Smarty version 3.1.39, created on 2021-04-26 01:00:09
   from '/Applications/MAMP/htdocs/mini_bbs/templates/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6084ee1d643da0_60285551',
+  'unifunc' => 'content_60861099097b45_76160170',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '13afe80dc639812cacd6d63d51ad9766a9873bb3' => 
     array (
       0 => '/Applications/MAMP/htdocs/mini_bbs/templates/index.tpl',
-      1 => 1619322064,
+      1 => 1619336421,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:inc/head.php' => 1,
+    'file:../inc/head.php' => 1,
   ),
 ),false)) {
-function content_6084ee1d643da0_60285551 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '3648919676084ee1d5e7aa5_29989175';
+function content_60861099097b45_76160170 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '114049401760861098f26719_71649286';
 ?>
 <!DOCTYPE html>
 <html lang="ja">
-<?php $_smarty_tpl->_subTemplateRender('file:inc/head.php', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array(), 0, false);
+<?php $_smarty_tpl->_subTemplateRender('file:../inc/head.php', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 <body>
@@ -64,7 +64,7 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['post']->value) {
 $_smarty_tpl->tpl_vars['post']->do_else = false;
 ?>
         <div class="msg">
-          <img src="member_picture/<?php echo $_smarty_tpl->tpl_vars['post']->value['picture'];?>
+          <img src="../images/member_picture/<?php echo $_smarty_tpl->tpl_vars['post']->value['picture'];?>
 " width="48" height="48" alt="<?php echo $_smarty_tpl->tpl_vars['post']->value['name'];?>
 " />
           <p>

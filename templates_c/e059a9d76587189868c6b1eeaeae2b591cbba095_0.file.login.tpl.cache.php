@@ -1,32 +1,32 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-25 04:15:46
+/* Smarty version 3.1.39, created on 2021-04-26 01:00:14
   from '/Applications/MAMP/htdocs/mini_bbs/templates/login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6084ecf2c42a35_37987743',
+  'unifunc' => 'content_6086109e5af014_07153530',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e059a9d76587189868c6b1eeaeae2b591cbba095' => 
     array (
       0 => '/Applications/MAMP/htdocs/mini_bbs/templates/login.tpl',
-      1 => 1619324144,
+      1 => 1619336464,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:inc/head.php' => 1,
+    'file:../inc/head.php' => 1,
   ),
 ),false)) {
-function content_6084ecf2c42a35_37987743 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '17529540776084ecf2bfdbd0_20348608';
+function content_6086109e5af014_07153530 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '19444130316086109e567cb2_50436895';
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<?php $_smarty_tpl->_subTemplateRender('file:inc/head.php', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array(), 0, false);
+<?php $_smarty_tpl->_subTemplateRender('file:../inc/head.php', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 <body>

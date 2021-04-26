@@ -5,7 +5,7 @@
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60861c7c342f26_13560721',
+  'unifunc' => 'content_60861c7c34e9d4_58955774',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -15,19 +15,25 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
       1 => 1619336265,
       2 => 'file',
     ),
+    '7294ebf4d07f567c71bd477e2456182febe7108b' => 
+    array (
+      0 => '/Applications/MAMP/htdocs/mini_bbs/inc/head.php',
+      1 => 1619399078,
+      2 => 'file',
+    ),
   ),
-  'includes' => 
-  array (
-    'file:../inc/head.php' => 1,
-  ),
-),false)) {
-function content_60861c7c342f26_13560721 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '206633985660861c7c2f0282_05558314';
-?>
-<!DOCTYPE html>
+  'cache_lifetime' => 3600,
+),true)) {
+function content_60861c7c34e9d4_58955774 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="ja">
-<?php $_smarty_tpl->_subTemplateRender('file:../inc/head.php', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>オリジナル掲示板</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
 
 <body>
   <div id="wrap">
@@ -37,15 +43,11 @@ $_smarty_tpl->compiled->nocache_hash = '206633985660861c7c2f0282_05558314';
     <div id="content">
       <div class="msg">
         <form action="insert.php" method="post">
-          <input type="hidden" name="message" value="<?php echo $_smarty_tpl->tpl_vars['message']->value;?>
-" />
-          <input type="hidden" name="member_id" value="<?php echo $_smarty_tpl->tpl_vars['member_id']->value;?>
-" />
-          <input type="hidden" name="reply_post_id" value="<?php echo $_smarty_tpl->tpl_vars['reply_post_id']->value;?>
-" />
+          <input type="hidden" name="message" value="っっっｆ" />
+          <input type="hidden" name="member_id" value="" />
+          <input type="hidden" name="reply_post_id" value="" />
           投稿内容：
-          <?php echo $_smarty_tpl->tpl_vars['message']->value;?>
-
+          っっっｆ
           <br><br>
           <a href="index.php">&laquo;&nbsp;入力に戻る</a> | <input type="submit" value="投稿" />
         </form>

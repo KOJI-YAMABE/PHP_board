@@ -19,6 +19,11 @@ if (!empty($_POST['post_id'])) {
   }
   header('Location: thanks.php');
   exit();
-}
+} 
+else {
+  // この行を追加
+    header('Location: index.php');
+    exit;
+  }
 
 ?>

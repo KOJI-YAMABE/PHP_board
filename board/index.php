@@ -6,8 +6,8 @@ include '../inc/functions.php';
 
 $smarty = new Smarty_mini_bbs();
 
-include 'inc/session.php';
-include 'inc/pagenation.php';
+include '../inc/session.php';
+include '../inc/pagenation.php';
 
 $posts = $db->prepare('SELECT m.name, m.picture, p.* FROM members m,posts p WHERE m.id=p.member_id AND enabled=0 ORDER BY p.created DESC LIMIT ?,5');
 $posts->bindParam(1, $start, PDO::PARAM_INT);

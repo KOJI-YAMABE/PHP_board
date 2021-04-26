@@ -1,24 +1,24 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-25 03:33:21
+/* Smarty version 3.1.39, created on 2021-04-26 01:05:50
   from '/Applications/MAMP/htdocs/mini_bbs/templates/join/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6084e3013fdef4_38792819',
+  'unifunc' => 'content_608611ee2cbda8_34825229',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '834369ac4ec382d5cb29f4bc5e55485a5ad52cf0' => 
     array (
       0 => '/Applications/MAMP/htdocs/mini_bbs/templates/join/index.tpl',
-      1 => 1619242682,
+      1 => 1619399148,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 3600,
 ),true)) {
-function content_6084e3013fdef4_38792819 (Smarty_Internal_Template $_smarty_tpl) {
+function content_608611ee2cbda8_34825229 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="ja">
 	<head>
@@ -26,8 +26,9 @@ function content_6084e3013fdef4_38792819 (Smarty_Internal_Template $_smarty_tpl)
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>オリジナル掲示板</title>
-		<link rel="stylesheet" href="../style.css" />
+		<link rel="stylesheet" href="../../style.css" />
 	</head>
+	
 
 <body>
 	<div id="wrap">

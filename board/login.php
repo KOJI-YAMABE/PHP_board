@@ -6,13 +6,14 @@ include '../inc/functions.php';
 
 $smarty = new Smarty_mini_bbs();
 
-// メールアドレスが入力されてたらクッキーに保存
-if ($_POST['email'] !== '') {
+// クッキーにメールアドレスが保存されてたら
+if ($_COOKIE['email'] !== '') {
   $email = $_COOKIE['email'];
 }
 // ログインを押してフォームが空でなければ
 if (!empty($_POST)) {
   $email = $_POST['email'];
+  
   if ($email !== '' && $_POST['password'] !== '') {
     $login = $db->prepare('SELECT * FROM members WHERE email=? AND password=?');
     $login->execute(array(

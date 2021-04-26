@@ -16,7 +16,7 @@
             <dd>
               <textarea name="msg" cols="50" rows="5">{$post.message}</textarea>
               <input type="hidden" name="post_id" value="{$post.id}" />
-              <input type="hidden" name="id" value="{$post.member_id}" />
+              <input type="hidden" name="member_id" value="{$post.member_id}" />
             </dd>
           </dl>
           <div>
