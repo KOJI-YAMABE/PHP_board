@@ -4,7 +4,7 @@ require('../libs/dbconnect.php');
 require_once('../setup.php');
 include '../inc/functions.php';
 
-$smarty = new Smarty_mini_bbs ();
+$smarty = new Smarty_mini_bbs();
 
 if (empty($_POST['msg'])) {
   header('Location: index.php');
