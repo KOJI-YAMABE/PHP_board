@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-26 01:05:50
+/* Smarty version 3.1.39, created on 2021-04-29 07:29:21
   from '/Applications/MAMP/htdocs/mini_bbs/templates/join/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_608611ee2ba609_94379274',
+  'unifunc' => 'content_608a6051afc436_57523074',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '834369ac4ec382d5cb29f4bc5e55485a5ad52cf0' => 
     array (
       0 => '/Applications/MAMP/htdocs/mini_bbs/templates/join/index.tpl',
-      1 => 1619399148,
+      1 => 1619681324,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_608611ee2ba609_94379274 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '48326998608611ee268af8_29451479';
+function content_608a6051afc436_57523074 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '509158154608a6051a92ef5_89212333';
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -43,6 +43,8 @@ $_smarty_tpl->compiled->nocache_hash = '48326998608611ee268af8_29451479';
 		<div id="content">
 			<p>次のフォームに必要事項をご記入ください。</p>
 			<form action="" method="post" enctype="multipart/form-data">
+				<input type="hidden" name="token" value="<?php echo $_smarty_tpl->tpl_vars['token']->value;?>
+">
 				<dl>
 					<dt>ニックネーム<span class="required">必須</span></dt>
 					<dd>

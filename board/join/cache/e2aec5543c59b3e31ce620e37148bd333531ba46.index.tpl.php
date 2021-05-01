@@ -1,24 +1,24 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-26 01:05:50
+/* Smarty version 3.1.39, created on 2021-05-01 05:14:11
   from '/Applications/MAMP/htdocs/mini_bbs/templates/join/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_608611ee2cbda8_34825229',
+  'unifunc' => 'content_608ce3a3678d32_48357593',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '834369ac4ec382d5cb29f4bc5e55485a5ad52cf0' => 
     array (
       0 => '/Applications/MAMP/htdocs/mini_bbs/templates/join/index.tpl',
-      1 => 1619399148,
+      1 => 1619681324,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 3600,
 ),true)) {
-function content_608611ee2cbda8_34825229 (Smarty_Internal_Template $_smarty_tpl) {
+function content_608ce3a3678d32_48357593 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="ja">
 	<head>
@@ -39,6 +39,7 @@ function content_608611ee2cbda8_34825229 (Smarty_Internal_Template $_smarty_tpl)
 		<div id="content">
 			<p>次のフォームに必要事項をご記入ください。</p>
 			<form action="" method="post" enctype="multipart/form-data">
+				<input type="hidden" name="token" value="">
 				<dl>
 					<dt>ニックネーム<span class="required">必須</span></dt>
 					<dd>

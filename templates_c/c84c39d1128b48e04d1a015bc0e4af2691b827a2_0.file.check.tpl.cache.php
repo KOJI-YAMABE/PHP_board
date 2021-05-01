@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-24 05:01:01
+/* Smarty version 3.1.39, created on 2021-04-28 03:13:05
   from '/Applications/MAMP/htdocs/mini_bbs/templates/join/check.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6083a60d9adff5_54080412',
-  'has_nocache_code' => true,
+  'unifunc' => 'content_6088d2c126ea24_21459829',
+  'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c84c39d1128b48e04d1a015bc0e4af2691b827a2' => 
     array (
       0 => '/Applications/MAMP/htdocs/mini_bbs/templates/join/check.tpl',
-      1 => 1619234581,
+      1 => 1619399206,
       2 => 'file',
     ),
   ),
@@ -20,19 +20,19 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6083a60d9adff5_54080412 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '3700528746083a60d951d67_56102076';
+function content_6088d2c126ea24_21459829 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '21091633966088d2c120b0e1_29712774';
 ?>
 <!DOCTYPE html>
 <html lang="ja">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>オリジナル掲示板</title>
-  <link rel="stylesheet" href="../style.css" />
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>オリジナル掲示板</title>
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  
 
 <body>
   <div id="wrap">
@@ -46,42 +46,19 @@ $_smarty_tpl->compiled->nocache_hash = '3700528746083a60d951d67_56102076';
         <input type="hidden" name="action" value="submit" />
         <dl>
           <dt>ニックネーム</dt>
-          <dd>
-            <?php echo '/*%%SmartyNocache:3700528746083a60d951d67_56102076%%*/<?php echo \'<?php \';?>
-/*/%%SmartyNocache:3700528746083a60d951d67_56102076%%*/';?>
-print(h($_SESSION['join']['name'])); <?php echo '/*%%SmartyNocache:3700528746083a60d951d67_56102076%%*/<?php echo \'?>\';?>
-/*/%%SmartyNocache:3700528746083a60d951d67_56102076%%*/';?>
-
-          </dd>
+          <dd><?php echo $_smarty_tpl->tpl_vars['name']->value;?>
+</dd>
           <dt>メールアドレス</dt>
-          <dd>
-            <?php echo '/*%%SmartyNocache:3700528746083a60d951d67_56102076%%*/<?php echo \'<?php \';?>
-/*/%%SmartyNocache:3700528746083a60d951d67_56102076%%*/';?>
-print(h($_SESSION['join']['email'])); <?php echo '/*%%SmartyNocache:3700528746083a60d951d67_56102076%%*/<?php echo \'?>\';?>
-/*/%%SmartyNocache:3700528746083a60d951d67_56102076%%*/';?>
-
-          </dd>
+          <dd><?php echo $_smarty_tpl->tpl_vars['email']->value;?>
+</dd>
           <dt>パスワード</dt>
-          <dd>
-            【表示されません】
-          </dd>
+          <dd>【表示されません】</dd>
           <dt>プロフィール画像</dt>
           <dd>
-            <?php echo '/*%%SmartyNocache:3700528746083a60d951d67_56102076%%*/<?php echo \'<?php \';?>
-/*/%%SmartyNocache:3700528746083a60d951d67_56102076%%*/';?>
-if ($_SESSION['join']['image'] !== ''): <?php echo '/*%%SmartyNocache:3700528746083a60d951d67_56102076%%*/<?php echo \'?>\';?>
-/*/%%SmartyNocache:3700528746083a60d951d67_56102076%%*/';?>
-
-            <img src="../member_picture/<?php echo '/*%%SmartyNocache:3700528746083a60d951d67_56102076%%*/<?php echo \'<?php \';?>
-/*/%%SmartyNocache:3700528746083a60d951d67_56102076%%*/';?>
-print(h($_SESSION['join']['image'])); <?php echo '/*%%SmartyNocache:3700528746083a60d951d67_56102076%%*/<?php echo \'?>\';?>
-/*/%%SmartyNocache:3700528746083a60d951d67_56102076%%*/';?>
+            <?php if ($_smarty_tpl->tpl_vars['image']->value) {?>
+            <img src="../../images/member_picture/<?php echo $_smarty_tpl->tpl_vars['image']->value;?>
 ">
-            <?php echo '/*%%SmartyNocache:3700528746083a60d951d67_56102076%%*/<?php echo \'<?php \';?>
-/*/%%SmartyNocache:3700528746083a60d951d67_56102076%%*/';?>
-endif; <?php echo '/*%%SmartyNocache:3700528746083a60d951d67_56102076%%*/<?php echo \'?>\';?>
-/*/%%SmartyNocache:3700528746083a60d951d67_56102076%%*/';?>
-
+            <?php }?>
           </dd>
         </dl>
         <div><a href="index.php?action=rewrite">&laquo;&nbsp;戻る</a> | <input type="submit" value="登録" /></div>

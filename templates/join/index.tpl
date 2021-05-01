@@ -18,6 +18,7 @@
 		<div id="content">
 			<p>次のフォームに必要事項をご記入ください。</p>
 			<form action="" method="post" enctype="multipart/form-data">
+				<input type="hidden" name="token" value="{$token}">
 				<dl>
 					<dt>ニックネーム<span class="required">必須</span></dt>
 					<dd>

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-26 01:50:52
+/* Smarty version 3.1.39, created on 2021-04-28 03:18:49
   from '/Applications/MAMP/htdocs/mini_bbs/templates/confirm.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60861c7c34e9d4_58955774',
+  'unifunc' => 'content_6088d419a9fb62_26838607',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 3600,
 ),true)) {
-function content_60861c7c34e9d4_58955774 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6088d419a9fb62_26838607 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -43,11 +43,11 @@ function content_60861c7c34e9d4_58955774 (Smarty_Internal_Template $_smarty_tpl)
     <div id="content">
       <div class="msg">
         <form action="insert.php" method="post">
-          <input type="hidden" name="message" value="っっっｆ" />
-          <input type="hidden" name="member_id" value="" />
+          <input type="hidden" name="message" value="aaa" />
+          <input type="hidden" name="member_id" value="9" />
           <input type="hidden" name="reply_post_id" value="" />
           投稿内容：
-          っっっｆ
+          aaa
           <br><br>
           <a href="index.php">&laquo;&nbsp;入力に戻る</a> | <input type="submit" value="投稿" />
         </form>

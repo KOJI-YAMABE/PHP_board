@@ -5,7 +5,7 @@
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6088d41ad950b9_34794288',
+  'unifunc' => 'content_6088d41ada3b54_88494528',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -15,19 +15,25 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
       1 => 1619336506,
       2 => 'file',
     ),
+    '7294ebf4d07f567c71bd477e2456182febe7108b' => 
+    array (
+      0 => '/Applications/MAMP/htdocs/mini_bbs/inc/head.php',
+      1 => 1619399078,
+      2 => 'file',
+    ),
   ),
-  'includes' => 
-  array (
-    'file:../inc/head.php' => 1,
-  ),
-),false)) {
-function content_6088d41ad950b9_34794288 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '11891640296088d41ad3e7e0_36454562';
-?>
-<!DOCTYPE html>
+  'cache_lifetime' => 3600,
+),true)) {
+function content_6088d41ada3b54_88494528 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="ja">
-<?php $_smarty_tpl->_subTemplateRender('file:../inc/head.php', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>オリジナル掲示板</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
 
 <body>
 	<div id="wrap">
