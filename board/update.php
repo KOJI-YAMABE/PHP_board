@@ -1,6 +1,6 @@
 <?php
 session_start();
-require('../libs/dbconnect.php');
+require('libs/dbconnect.php');
 
 if (!empty($_POST['post_id'])) {
   $post_id = $_POST['post_id'];

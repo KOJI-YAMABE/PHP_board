@@ -43,15 +43,7 @@
         </div>
       {/foreach}
 
-      <ul class="paging">
-        {if $page > 1}
-          <li><a href="index.php?page={$page - 1}">前のページへ</a></li>
-        {/if}
-
-        {if $page < $maxPage}
-          <li><a href="index.php?page={$page + 1}">次のページへ</a></li>
-        {/if}
-      </ul>
+      {include file="inc/page.tpl"}
     </div>
   </div>
 </body>

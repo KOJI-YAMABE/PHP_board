@@ -1,6 +1,6 @@
 <?php
 session_start();
-require('../libs/dbconnect.php');
+require('libs/dbconnect.php');
 
 if (isset($_SESSION['id'])) {
   $post_id = $_REQUEST['id'];

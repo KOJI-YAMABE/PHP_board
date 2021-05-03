@@ -1,6 +1,6 @@
 <?php
 session_start();
-require('../libs/dbconnect.php');
+require('libs/dbconnect.php');
 
 if (!empty($_POST)) {
     $message = $db->prepare('INSERT INTO posts SET member_id=?, message=?, reply_message_id=?, created=NOW()');
