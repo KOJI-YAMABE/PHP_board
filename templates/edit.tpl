@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-{include file='../inc/head.php'}
+{include file='inc/head.php'}
 
 <body>
   <div id="wrap">

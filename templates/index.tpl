@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-{include file='../inc/head.php'}
+{include file='inc/head.php'}
 
 <body>
   <div id="wrap">
@@ -43,7 +43,15 @@
         </div>
       {/foreach}
 
-      {include file="inc/page.tpl"}
+      <ul class="paging">
+        {if $last != null}
+          <li><a href="index.php?page={$last}">前のページへ</a></li>
+        {/if}
+        {if $next != null}
+          <li><a href="index.php?page={$next}">次のページへ</a></li>
+        {/if}
+      </ul>
+      
     </div>
   </div>
 </body>
