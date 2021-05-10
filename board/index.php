@@ -1,8 +1,7 @@
 <?php
 session_start();
-require('libs/dbconnect.php');
+require('../libs/dbconnect.php');
 require_once('../setup.php');
-include 'inc/functions.php';
 
 $smarty = new Smarty_mini_bbs();
 
@@ -32,7 +31,6 @@ if ($_REQUEST['action'] == 'rewrite' && isset($_POST['message'])) {
 $smarty->assign('member_id', $member['id']);
 $smarty->assign('name', $member['name']);
 
-ini_set('display_errors', "On");
 
 $smarty->display('index.tpl');
 ?>

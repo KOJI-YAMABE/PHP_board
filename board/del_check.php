@@ -1,8 +1,7 @@
 <?php
 session_start();
-require('libs/dbconnect.php');
+require('../libs/dbconnect.php');
 require_once('../setup.tpl');
-include 'inc/functions.php';
 
 $smarty = new Smarty_mini_bbs();
 

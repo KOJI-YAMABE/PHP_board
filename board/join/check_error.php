@@ -40,8 +40,8 @@ if (!empty($_POST)) {
 	if (empty($error)) {
 		// ****CSRF対策としてこの行を追加****
 		$token = bin2hex(random_bytes(32));
-		$_SESSION['token'] = $token;
-		$smarty->assgin('token', $_SESSION['token']);
+		$_SESSION['join']['token'] = $token;
+		$smarty->assgin('token', $_SESSION['join']['token']);
 		//    ****ここまで****
 
 		$image = date('YmdHis') . $_FILES['image']['name'];

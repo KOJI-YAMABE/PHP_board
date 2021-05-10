@@ -1,8 +1,7 @@
 <?php
 session_start();
-require('../libs/dbconnect.php');
+require('../../libs/dbconnect.php');
 require_once('../../setup.php');
-include '../inc/functions.php';
 
 $smarty = new Smarty_mini_bbs();
 
@@ -13,18 +12,16 @@ if (!isset($_SESSION['join'])) {
 }
 // データが空ではなければtoken確認
 if (!empty($_POST)) {
-	if (!$_POST['token'] || !$_SESSION['token']) {
+	if (!$_POST['join']['token'] || !$_SESSION['join']['token']) {
 		$_SESSION = array();
 		header('Location: index.php');
 		exit();
-	} else if ($_POST['token'] != $_SESSION['token']) {
+	} elseif ($_POST['join']['token'] != $_SESSION['join']['token']) {
 		$_SESSION = array();
 		header('Location: index.php');
 		exit();
 	}
-} 
 // tokenの確認が取れたらDBに登録する
-else {
 	$statement = $db->prepare('INSERT INTO members SET name=?, email=?, password=?, picture=?, created=NOW()');
 	// sha1()：ハッシュ関数、DBに登録されたパスワードは非可逆暗号化される
 	$statement->execute(array(
@@ -39,7 +36,7 @@ else {
 	
 	// unset：変数を削除する
 	// 使い終わった不要なセッション変数をすぐに削除する。重複防止
-	unset($_SESSION['join'], $_SESSION['token']);
+	unset($_SESSION['join'], $_SESSION['join']['token']);
 
 	// 登録完了ページに遷移
 	header('Location: thanks.php');

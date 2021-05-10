@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-05-04 02:44:42
+/* Smarty version 3.1.39, created on 2021-05-09 05:21:12
   from '/Applications/MAMP/htdocs/mini_bbs/templates/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6090b51a80de80_03712968',
+  'unifunc' => 'content_60977148a93871_34775835',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '13afe80dc639812cacd6d63d51ad9766a9873bb3' => 
     array (
       0 => '/Applications/MAMP/htdocs/mini_bbs/templates/index.tpl',
-      1 => 1620096073,
+      1 => 1620537265,
       2 => 'file',
     ),
   ),
@@ -21,8 +21,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:inc/head.php' => 1,
   ),
 ),false)) {
-function content_6090b51a80de80_03712968 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '15406681396090b51a791914_49638801';
+function content_60977148a93871_34775835 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '25406701160977148a26aa6_18747905';
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -67,23 +67,22 @@ $_smarty_tpl->tpl_vars['post']->do_else = false;
           <img src="../images/member_picture/<?php echo $_smarty_tpl->tpl_vars['post']->value['picture'];?>
 " width="48" height="48" alt="<?php echo $_smarty_tpl->tpl_vars['post']->value['name'];?>
 " />
-          <p>
-            <?php echo $_smarty_tpl->tpl_vars['post']->value['message'];?>
+          <p><?php echo $_smarty_tpl->tpl_vars['post']->value['message'];?>
 <span class="name">（<?php echo $_smarty_tpl->tpl_vars['post']->value['name'];?>
-）</span>[<a href="index.php?res=<?php echo $_smarty_tpl->tpl_vars['post']->value['id'];?>
+）</span>
+            [<a href="index.php?res=<?php echo $_smarty_tpl->tpl_vars['post']->value['id'];?>
 ">返信</a>]
           </p>
           <p class="day">
             <a href="view.php?id=<?php echo $_smarty_tpl->tpl_vars['post']->value['id'];?>
 "><?php echo $_smarty_tpl->tpl_vars['post']->value['created'];?>
 </a>
+          </p>
             <!-- 返信投稿のみ表示 -->
             <?php if ($_smarty_tpl->tpl_vars['post']->value['reply_message_id'] > 0) {?>
               <a href="view.php?id=<?php echo $_smarty_tpl->tpl_vars['post']->value['reply_message_id'];?>
-">
-                返信元のメッセージ</a>
+">返信元のメッセージ</a>
             <?php }?>
-          </p>
         </div>
       <?php
 }

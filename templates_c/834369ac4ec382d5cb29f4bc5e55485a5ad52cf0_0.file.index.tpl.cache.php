@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-29 07:29:21
+/* Smarty version 3.1.39, created on 2021-05-10 04:16:12
   from '/Applications/MAMP/htdocs/mini_bbs/templates/join/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_608a6051afc436_57523074',
+  'unifunc' => 'content_6098b38c3f7bd6_44984473',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '834369ac4ec382d5cb29f4bc5e55485a5ad52cf0' => 
     array (
       0 => '/Applications/MAMP/htdocs/mini_bbs/templates/join/index.tpl',
-      1 => 1619681324,
+      1 => 1620619689,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_608a6051afc436_57523074 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '509158154608a6051a92ef5_89212333';
+function content_6098b38c3f7bd6_44984473 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '11605621066098b38c3609f8_81318087';
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -43,6 +43,7 @@ $_smarty_tpl->compiled->nocache_hash = '509158154608a6051a92ef5_89212333';
 		<div id="content">
 			<p>次のフォームに必要事項をご記入ください。</p>
 			<form action="" method="post" enctype="multipart/form-data">
+				<!-- CSRF対策としてtokenをhiddenで送信 -->
 				<input type="hidden" name="token" value="<?php echo $_smarty_tpl->tpl_vars['token']->value;?>
 ">
 				<dl>
@@ -50,7 +51,7 @@ $_smarty_tpl->compiled->nocache_hash = '509158154608a6051a92ef5_89212333';
 					<dd>
 						<input type="text" name="name" size="35" maxlength="50"
 							value="" />
-							<!-- php if (isset($_POST['name'])) { echo h($_POST['name']); } -->
+							<!-- value="php if (isset($_POST['name'])) { echo h($_POST['name']); } -->
 						<?php if ($_smarty_tpl->tpl_vars['blank']->value) {?>
 						<p class="error">*ニックネームを入力してください</p>
 						<?php }?>
@@ -59,7 +60,7 @@ $_smarty_tpl->compiled->nocache_hash = '509158154608a6051a92ef5_89212333';
 					<dd>
 						<input type="text" name="email" size="35" maxlength="255"
 							value="" />
-							<!-- php if (isset($_POST['email'])) { echo h($_POST['email']); } -->
+							<!--value="php if (isset($_POST['email'])) { echo h($_POST['email']); }" -->
 						<?php if ($_smarty_tpl->tpl_vars['email']->value) {?>
 						<p class="error">*正しいメールアドレスを指定してください</p>
 						<?php }?>
@@ -71,7 +72,7 @@ $_smarty_tpl->compiled->nocache_hash = '509158154608a6051a92ef5_89212333';
 					<dd>
 						<input type="password" name="password" size="10"
 							value="" />
-							<!-- php if (isset($_POST['password'])) { echo h($_POST['password']); } -->
+							<!-- value="php if (isset($_POST['password'])) { echo h($_POST['password']); } -->
 						<?php if ($_smarty_tpl->tpl_vars['password']->value) {?>
 						<p class="error">*半角英数字の４文字以上で入力してください</p>
 						<?php }?>

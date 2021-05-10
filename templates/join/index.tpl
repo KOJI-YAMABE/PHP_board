@@ -18,13 +18,14 @@
 		<div id="content">
 			<p>次のフォームに必要事項をご記入ください。</p>
 			<form action="" method="post" enctype="multipart/form-data">
+				<!-- CSRF対策としてtokenをhiddenで送信 -->
 				<input type="hidden" name="token" value="{$token}">
 				<dl>
 					<dt>ニックネーム<span class="required">必須</span></dt>
 					<dd>
 						<input type="text" name="name" size="35" maxlength="50"
 							value="" />
-							<!-- php if (isset($_POST['name'])) { echo h($_POST['name']); } -->
+							<!-- value="php if (isset($_POST['name'])) { echo h($_POST['name']); } -->
 						{if $blank}
 						<p class="error">*ニックネームを入力してください</p>
 						{/if}
@@ -33,7 +34,7 @@
 					<dd>
 						<input type="text" name="email" size="35" maxlength="255"
 							value="" />
-							<!-- php if (isset($_POST['email'])) { echo h($_POST['email']); } -->
+							<!--value="php if (isset($_POST['email'])) { echo h($_POST['email']); }" -->
 						{if $email}
 						<p class="error">*正しいメールアドレスを指定してください</p>
 						{/if}
@@ -45,7 +46,7 @@
 					<dd>
 						<input type="password" name="password" size="10"
 							value="" />
-							<!-- php if (isset($_POST['password'])) { echo h($_POST['password']); } -->
+							<!-- value="php if (isset($_POST['password'])) { echo h($_POST['password']); } -->
 						{if $password}
 						<p class="error">*半角英数字の４文字以上で入力してください</p>
 						{/if}

@@ -29,17 +29,16 @@
       {foreach $posts as $post}
         <div class="msg">
           <img src="../images/member_picture/{$post.picture}" width="48" height="48" alt="{$post.name}" />
-          <p>
-            {$post.message}<span class="name">（{$post.name}）</span>[<a href="index.php?res={$post.id}">返信</a>]
+          <p>{$post.message}<span class="name">（{$post.name}）</span>
+            [<a href="index.php?res={$post.id}">返信</a>]
           </p>
           <p class="day">
             <a href="view.php?id={$post.id}">{$post.created}</a>
+          </p>
             <!-- 返信投稿のみ表示 -->
             {if $post.reply_message_id > 0}
-              <a href="view.php?id={$post.reply_message_id}">
-                返信元のメッセージ</a>
+              <a href="view.php?id={$post.reply_message_id}">返信元のメッセージ</a>
             {/if}
-          </p>
         </div>
       {/foreach}
 
