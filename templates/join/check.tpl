@@ -19,6 +19,8 @@
       <p>記入した内容を確認して、「登録する」ボタンをクリックしてください</p>
       <form action="" method="post">
         <input type="hidden" name="action" value="submit" />
+        <!-- CSRF対策としてtokenをhiddenで送信 -->
+        <input type="hidden" name="token" value="{$token}">
         <dl>
           <dt>ニックネーム</dt>
           <dd>{$name}</dd>
